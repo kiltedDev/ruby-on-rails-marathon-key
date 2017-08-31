@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Project List:</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <% @group_projects.each do |project| %>
+      <td><%= link_to "#{project.group_name}", project %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+
+<%= link_to "Home", root_path%>

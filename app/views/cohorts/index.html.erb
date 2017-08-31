@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cohort List:</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <% @cohorts.each do |cohort| %>
+      <td><%= link_to "#{cohort.name}", cohort %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<br>

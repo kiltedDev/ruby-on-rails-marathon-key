@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cohort Details</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <td><%= link_to "#{@cohort.name}", @cohort %></td>
+    </tr>
+  </tbody>
+</table>
+
+<% @students.each do |student| %>
+<%= "#{student.first_name} #{student.last_name}" %>
+<br/>
+<% end %>
+
+<% @mentors.each do |mentor| %>
+<%= "#{mentor.first_name} #{mentor.last_name}" %>
+<br/>
+<% end %>
+
+<% @cohort.group_projects.each do |project| %>
+<%= link_to project.group_name, project %>
+<br/>
+<% end %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Student Roster:</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <% @students.each do |student| %>
+      <td><%= "#{student.first_name} #{student.last_name}" %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "Home", root_path%>
